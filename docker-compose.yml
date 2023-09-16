@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  spring-app:
+    image: my-springboot-img
+    ports:
+      - "8181:8181"
+    environment:
+      SPRING_DATASOURCE_URL: "jdbc:mysql://host.docker.internal:3306/onlinejudge?autoReconnect=true&allowPublicKeyRetrieval=true&useSSL=false"
+      SPRING_DATASOURCE_USERNAME: "root"
+      SPRING_DATASOURCE_PASSWORD: "Root@123"
+
